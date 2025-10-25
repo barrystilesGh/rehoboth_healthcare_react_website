@@ -1,0 +1,251 @@
+.ourCare {
+  padding: 3em 0.5em 1em 0.5em;
+  color: #000;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 13%, 100% 95%, 0 84%);
+}
+.figure {
+  width: 40%;
+  max-width: 250px;
+  max-height: 200px;
+}
+.figure img {
+  display: block;
+  width: 200px;
+  height: 150px;
+}
+
+.careH > h2 {
+  text-transform: uppercase;
+  margin-top: 0.5em;
+  color: #3bf4fb;
+  font-weight: 800;
+  font-size: 14px;
+  text-shadow: -2px 2px 3px #000;
+  letter-spacing: 3px;
+}
+.careH {
+  width: 60%;
+}
+
+#link {
+  background: #caff8a;
+  display: none;
+  margin-top: -5px;
+  width: 150px;
+  padding: 0.5em;
+  text-decoration: none;
+  border-radius: 20px;
+  text-align: center;
+  color: #000;
+}
+
+/*** The brand Rehoboth Healthcare Professional***/
+.inner-container h1 {
+  text-align: center;
+  color: #000;
+  padding: 5px;
+  background-color: #caff8a;
+  text-transform: capitalize;
+}
+
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  background-color: #caff8a;
+}
+.card {
+  width: 90%;
+  margin: 10px auto;
+  background: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  font-weight: 600;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 2px 2px #3bf4fb;
+  /* border-bottom: 2px solid #3bf4fb; */
+  transition: all 3s ease-in-out;
+}
+.card > div {
+  width: 40%;
+}
+.card .image img {
+  display: block;
+  width: 200px;
+  height: 150px;
+}
+
+.card h2 {
+  font-family: serif;
+  font-size: 16px;
+  color: #06f3fc;
+  text-shadow: 2px 2px 2px #111;
+}
+.card img {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+}
+#link2 {
+  background: #06f3fc;
+  display: inline-block;
+  margin: 3px;
+  width: 80%;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0.5em;
+  text-decoration: none;
+  border-radius: 20px;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+}
+
+/*** About Us page***/
+.about_page {
+  background: #3bf4fb;
+}
+
+.about_page h2,
+.h3 {
+  color: #000;
+  font-size: 16px;
+  padding-top: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.about_page p {
+  color: #000;
+  padding: 20px;
+  font-weight: 500;
+}
+
+.about_page strong {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: -1px 2px 1px #000;
+}
+
+#link3 {
+  display: none;
+}
+#link1 {
+  background: #caff8a;
+  display: block;
+  margin: 1em auto;
+  width: 50%;
+  padding: 1em;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 40px;
+  text-align: center;
+  color: #000;
+}
+#link1:hover,
+#link1:focus {
+  box-shadow: -2px 2px 4px 2px #3bf4fb;
+  transition: all 2s linear;
+  cursor: pointer;
+}
+
+.card2 {
+  width: 100%;
+  padding: 0.5em;
+  background: white;
+  color: #caff8a;
+  box-shadow: 4px 3px 4px 3px rgba(0, 0, 0, 0.315);
+  border-bottom: 5px solid#3bf4fb;
+  margin: 1.5em auto;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.card2 img {
+  height: auto;
+  width: 100%;
+  border-radius: 50%;
+  border: 5px double #caff8a;
+  display: block;
+}
+.card2 h3 {
+  margin-top: 1em;
+  padding: 0.5em;
+  border-top: 2px double #caff8a;
+  text-align: center;
+  color: #caff8a;
+}
+
+.testimonials {
+  background: #fff;
+  box-shadow: 2px -2px 2px 1px #caff8a;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.testimonials > h2,
+h4 {
+  color: #000;
+  text-align: center;
+  font-family: serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 10px;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px #19191a;
+}
+
+.testimonials > h2 {
+  font-size: 16px;
+  margin-bottom: -15px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.testimonials > h4 {
+  margin-bottom: -1em;
+  color: #000;
+}
+
+.testimonials > p {
+  color: #000;
+  padding: 0.5em;
+}
+
+.testimonials .testimonies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.testimony:last-of-type {
+  display: none;
+}
+
+.testimonials .testimonies .testimony {
+  width: 45%;
+  padding: 10px;
+  min-height: 200px;
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: -1em;
+  font-weight: 300;
+}
+
+.testimony span {
+  color: #000;
+  font-weight: 900;
+}

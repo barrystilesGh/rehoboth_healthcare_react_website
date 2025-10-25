@@ -1,0 +1,77 @@
+/* Contact Us sectiion */
+.ft {
+  min-height: 20vh;
+  grid-area: ft;
+  background: #3bf4fb;
+  padding: 0.5em;
+  font-weight: 500;
+}
+
+.el h3 {
+  color: #fff;
+}
+.el p {
+  color: #fff;
+  margin-bottom: -5px;
+}
+.el p a {
+  color: #fff;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  border-bottom: 2px solid #ac05df;
+}
+
+.el {
+  background: #ac05df;
+  padding: 0.5em;
+  width: 30%;
+}
+
+/* Social media logos */
+.socials {
+  border-bottom: 2px solid #ac05df;
+}
+.socials h3 {
+  color: #000;
+  text-align: center;
+  padding: 0.2em;
+}
+
+.socials p {
+  color: #000;
+}
+.socials ul {
+  padding: 0.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  column-gap: 1em;
+}
+.socials ul li {
+  list-style: none;
+}
+.socials ul li a {
+  color: #ac05df;
+  text-decoration: none;
+  font-size: 18px;
+}
+.devDetails {
+  font-size: 11px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 0.5em;
+  color: #000;
+  text-align: center;
+}
+.devDetails span a {
+  margin-top: 1em;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+.devDetails a {
+  margin-left: 1em;
+}

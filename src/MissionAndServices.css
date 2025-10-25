@@ -1,0 +1,48 @@
+.mission-statement {
+  background: #ac05df;
+  padding: 10px;
+}
+
+.mission-statement #tabs > ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.mission-statement #tabs > ul > li > a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 5px;
+  background: #caff8a;
+  color: #000;
+  font-weight: 600;
+  padding: 0 3px;
+  border-radius: 10px 10px 0 0;
+}
+
+@media only screen and (max-width: 308px) {
+  .mission-statement #tabs > ul > li > a {
+    font-size: 80%;
+  }
+}
+
+.mission-statement #tabs .hidden {
+  display: none;
+}
+
+.mission-statement #tabs .visible {
+  display: block;
+  padding: 25px;
+  background: #3bf4fb;
+  color: #000;
+  border-radius: 0 10px 10px 10px;
+  min-height: 150px;
+}
+
+/* js button style */
+.mission-statement #tabs > ul li .visibleBtn {
+  background: #3bf4fb;
+}
+.activeBtn {
+  background: #3bf4fb;
+}

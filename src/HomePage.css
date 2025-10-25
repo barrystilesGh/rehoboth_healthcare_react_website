@@ -1,0 +1,87 @@
+.hero {
+  height: 120px;
+  padding: 0.2em;
+  background: #ac05df;
+  border-bottom: 3px solid #eee;
+}
+
+.companyName_Logo {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  height: 70%;
+}
+.companyName_Logo img {
+  position: relative;
+  top: -10px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.companyName_Logo > div {
+  color: #fff;
+}
+
+.companyName_Logo .motto {
+  margin-top: 3px;
+}
+.companyName_blue {
+  color: #06f3fc;
+  font-size: 1.5rem;
+  margin-inline: 15px;
+}
+.motto {
+  color: #eee;
+  line-height: 1;
+  font-size: 12px;
+  font-weight: 900;
+}
+@media only screen and (max-width: 430px) {
+  .motto {
+    display: none;
+  }
+  .companyName_Logo img {
+    display: none;
+  }
+  .company_name {
+    font-size: 1.1rem;
+  }
+}
+
+.navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  background-color: #d351fa;
+  padding: 5px;
+}
+.navigation ul li {
+  list-style-type: none;
+}
+
+.nav-link {
+  font-family: "Times New Roman", Times, serif;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul li .nav-link:hover {
+  color: #000;
+  border-bottom: 3px solid #ebf5ec;
+  transform: scale(1.2);
+  padding: 0;
+  transition: all 3s linear;
+}
+.nav-link .active {
+  color: #007bff;
+  border-bottom: 2px solid #fff;
+}

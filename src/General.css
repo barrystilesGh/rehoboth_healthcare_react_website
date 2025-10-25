@@ -1,0 +1,489 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Chakra+Petch&family=Kanit:wght@300&family=Pacifico&family=Roboto+Slab:wght@300&family=Shadows+Into+Light&display=swap");
+
+/* General settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* font Family */
+  --headerEl: "Chakra Petch", sans-serif;
+  --h2: "Pacifico", cursive;
+  --h1: "Acme", sans-serif;
+  --navBar: "Roboto Slab", serif;
+  --toTop: "Shadows Into Light", cursive;
+  --Socials: "Nunito", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
+nav ul li,
+nav ol li {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+/**** Basic Typography ***/
+
+body {
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: var(--navBar);
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 14px;
+  margin-bottom: 0.5em;
+  color: #000;
+}
+
+h3 {
+  font-size: 13px;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 0.8em;
+  line-height: 1.5;
+}
+
+/* Media query-responsive design */
+@media (min-width: 726px) {
+  body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: auto auto auto;
+    grid-template-areas:
+      "hd hd hd hd hd hd hd hd hd"
+      "mn mn mn mn mn mn mn sb sb"
+      "ft ft ft ft ft ft ft ft ft";
+    column-gap: 0.5em;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  body::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .navBar {
+    padding-top: 101px;
+    color: #fff;
+    grid-area: hd;
+    min-height: 50vh;
+  }
+
+  .navBar .innerNav {
+    border-bottom: 2px solid #fafafc;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    background: #ac05df;
+    height: 100px;
+    line-height: 1.5;
+  }
+
+  .innerNav .companyName_Logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .companyName_Logo img {
+    position: relative;
+    left: 10%;
+    top: 10px;
+  }
+
+  .companyName_Logo div {
+    color: #fff;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0;
+    left: -30px;
+    width: 70%;
+    height: 80%;
+    margin-top: 10px;
+    line-height: 1;
+  }
+  .companyName_Logo .motto {
+    margin-top: 0;
+  }
+
+  .companyName_blue {
+    /*align-content: center;  */
+    color: #06f3fc;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .motto {
+    font-size: 0.9rem;
+  }
+
+  .companyName_Logo h1 {
+    font-family: var(--h1);
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  .navBar .navi {
+    font-size: min(1rem, 2vh);
+    width: 50%;
+  }
+
+  .navBar .navigation ul {
+    background-color: #ac05df;
+  }
+
+  .navi ul {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    flex-wrap: nowrap;
+    margin-left: -25px;
+  }
+
+  .navi li {
+    margin-left: 5px;
+    letter-spacing: 2px;
+  }
+
+  .navi a {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .navi ul li a:hover {
+    color: #000;
+    transform: scale(1.2);
+    border-bottom: 3px solid #ebf5ec;
+    padding-bottom: 3px;
+    transition: all 3s linear;
+  }
+
+  /********* slide styles ***********/
+  .slider {
+    width: 100vw;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    font-size: 0.8rem;
+  }
+
+  .slider .slide-wrapper {
+    height: 500px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .slider .slide-wrapper .slideItem {
+    width: 100vw;
+    height: 500px;
+    position: relative;
+  }
+
+  .slider .slide-wrapper .slideItem:nth-child(1) {
+    background: url(../images/sliderImage.jpg) center/cover no-repeat;
+  }
+  .slider .slide-wrapper.slideItem:nth-child(2) {
+    background: url(../images/bpchecking2.jpeg) center/cover no-repeat;
+  }
+  .slider .slide-wrapper .slideItem:nth-child(3) {
+    background: url(../images/care-home.jpg) center/cover no-repeat;
+  }
+  .slider .slide-wrapper .slideItem:nth-child(4) {
+    background: url(../images/nurseandpatient.jpeg) center/cover no-repeat;
+  }
+  .slider .slide-wrapper .slideItem:nth-child(5) {
+    background: url(../images/holdingof-hands.jpg) center/cover no-repeat;
+  }
+
+  .slider .slide-wrapper .slideItem .cta {
+    background: rgba(43, 43, 173, 0.39);
+    padding: 50px;
+    height: 200px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    max-width: 80%;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+
+  @keyframes move {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .cta h3 {
+    color: #fff;
+    text-shadow: 2px 2px 2px black;
+    font-size: 1.2rem;
+  }
+
+  .ourCare {
+    padding: 5em 1em 2em 1em;
+    color: #caff8a;
+    gap: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 23%, 100% 95%, 0 74%);
+  }
+
+  .figure img {
+    display: block;
+  }
+  .figure {
+    position: relative;
+  }
+  .figure::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    box-shadow: -2px 4px 3px 2px rgba(53, 52, 52, 0.877);
+    bottom: -10px;
+    right: -10px;
+    width: 290px;
+    height: 170px;
+    background: #3bf4fb;
+    /* border-radius: 20px; */
+  }
+
+  /* Our care */
+  .careHeader {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    color: #3bf4fb;
+  }
+  .careH {
+    margin-left: 1em;
+  }
+  .ourCare p {
+    font-size: 0.9rem;
+    color: #000;
+    font-weight: 500;
+  }
+  #link {
+    background: #caff8a;
+    display: inline-block;
+    margin: 1em 0;
+    font-size: 0.8rem;
+    width: 150px;
+    padding: 0.5em;
+    text-decoration: none;
+    border-radius: 20px;
+    text-align: center;
+    color: #000;
+  }
+
+  /* Main page section */
+  .mn {
+    grid-area: mn;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(150px, auto);
+    gap: 10px;
+    font-size: 1rem;
+  }
+  .inner-container {
+    background: #caff8a;
+  }
+
+  .inner-container:first-child {
+    z-index: -1;
+    background: #0765df25;
+    grid-column: 1/4;
+    grid-row: 1/3;
+  }
+
+  .inner-container:nth-child(2) {
+    grid-column: 1/3;
+    grid-row: 3/6;
+    background: #caff8a;
+  }
+  .inner-container:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 3/6;
+  }
+
+  .inner-container:last-child {
+    padding: 1em;
+    color: #000;
+    background: white;
+    align-items: center;
+    text-align: center;
+    grid-column: 1/4;
+    grid-row: 6/7;
+  }
+
+  /* The brand rehoboth */
+  .card {
+    width: 90%;
+    margin: 10px auto;
+    background: white;
+    display: flex;
+    color: #000;
+    margin-top: 2.5em;
+    padding-top: 1em;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: 600;
+    gap: 30px;
+  }
+  .card > div {
+    width: 40%;
+  }
+
+  #link2 {
+    display: none;
+  }
+
+  /* About us page */
+  .about_page p {
+    color: #000;
+    padding: 10px;
+    font-weight: 400;
+  }
+
+  .about_page strong {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-shadow: -1px 2px 1px #000;
+  }
+
+  .card2 {
+    width: 100%;
+    padding: 0.5em;
+    background: white;
+    color: #caff8a;
+    box-shadow: 4px 3px 4px 3px rgba(0, 0, 0, 0.315);
+    border-bottom: 5px solid#3bf4fb;
+    margin: 1.5em auto;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .testimonials .testimonies .testimony {
+    width: 30%;
+    padding: 10px;
+    min-height: 300px;
+    color: #000;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: -1em;
+    /* font-size: 0.9rem; */
+  }
+
+  .sb {
+    padding: 5em 0.5em;
+    grid-area: sb;
+    background: #caff8a;
+  }
+  .sb h2 {
+    text-align: center;
+    text-shadow: 2px 3px 3px #caff8a;
+    color: #000;
+    font-size: 1.2rem;
+  }
+  .sb p {
+    padding: 0.5em;
+    text-shadow: 2px 3px 3px #caff8a;
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  /* testimonials */
+  .testimony:last-of-type {
+    display: block;
+  }
+
+  /* contact us and footer */
+  .ft {
+    min-height: 20vh;
+    grid-area: ft;
+    background: #3bf4fb;
+    padding: 1em;
+    font-size: 14px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 400;
+  }
+
+  .el h3 {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .el {
+    background: #ac05df;
+    width: 30%;
+  }
+
+  .socials h3 {
+    color: #000;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0.5em;
+  }
+
+  .socials > p {
+    padding: 20px;
+  }
+
+  .devDetails {
+    padding: 0.5em;
+    color: #000;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+  }
+}
