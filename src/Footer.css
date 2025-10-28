@@ -75,3 +75,7 @@
 .devDetails a {
   margin-left: 1em;
 }
+
+.devDetails span {
+  cursor: pointer;
+}

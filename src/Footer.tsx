@@ -1,4 +1,5 @@
 import "../src/Footer.css";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -93,7 +94,9 @@ const Footer = () => {
           <p>Website Designed by Barry Stiles</p>
           <span>
             <i className='fa-solid fa-house'></i>
-            <a href='#top'>To Home</a>
+            <Link to='tab1' smooth={true} duration={300}>
+              To Home
+            </Link>
           </span>
         </div>
       </footer>

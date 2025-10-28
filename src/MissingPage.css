@@ -1,10 +1,14 @@
 .missingPage {
   height: 100vh;
   display: grid;
+  align-items: center;
   place-content: center;
+  width: 100vw;
 }
 
 .missingPage p {
   color: #000;
-  margin-top: 50px;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: -100%;
 }

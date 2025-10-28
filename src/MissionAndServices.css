@@ -9,6 +9,7 @@
 }
 
 .mission-statement #tabs > ul > li > a {
+  text-decoration: none;
   display: block;
   height: 30px;
   line-height: 30px;
@@ -21,7 +22,7 @@
 }
 
 @media only screen and (max-width: 308px) {
-  .mission-statement #tabs > ul > li > a {
+  .mission-statement > ul > li > a {
     font-size: 80%;
   }
 }

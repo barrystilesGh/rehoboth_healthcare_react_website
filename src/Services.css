@@ -3,6 +3,7 @@
   color: #000;
   padding: 20px;
   font-weight: 500;
+  text-box-trim: trim-end;
 }
 
 .sb > h2 {
