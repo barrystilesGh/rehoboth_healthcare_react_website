@@ -1,11 +1,26 @@
 import "../src/MissionAndServices.css";
-import { useState } from "react";
+import { useState, type JSX } from "react";
+
+const drink = (weight: number | string): string | number => {
+  if (typeof weight === "number") return weight * 4;
+  else {
+    return parseInt(weight);
+  }
+};
+console.log(drink("50"));
+console.log(drink("15"));
+
+type Content = {
+  id: string;
+  content: JSX.Element;
+  title: string;
+  href: string;
+};
 
 const MissionAndService = () => {
-  const [isActive, setIsActive] = useState<number>("mission");
-  console.log(typeof isActive);
+  const [isActive, setIsActive] = useState<string>("mission");
 
-  const [content, setContent] = useState([
+  const content: Content[] = [
     {
       id: "mission",
       content: (
@@ -71,15 +86,7 @@ const MissionAndService = () => {
       title: "Our Values",
       href: "#values",
     },
-  ]);
-
-  /*   const handleTab = (evt: React.MouseEvent<HTMLAnchorElement>) => {
-    evt.preventDefault();
-    content.map((eachContent) => {
-      setIsActive(eachContent.id);
-    });
-    console.log(isActive);
-  }; */
+  ];
 
   return (
     <div>
