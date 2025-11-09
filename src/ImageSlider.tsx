@@ -1,8 +1,14 @@
 import "../src/ImageSlider.css";
-import { useState } from "react";
+
+type CtaData = {
+  key: string;
+  status: string;
+  title: string;
+  content: string;
+}[];
 
 const ImageSlider = () => {
-  const [ctaData, setCtaData] = useState([
+  const ctaData: CtaData = [
     {
       key: "001",
       status: "Recruiting",
@@ -38,7 +44,7 @@ const ImageSlider = () => {
       content:
         " Discover the difference that personalized and compassionate home health care can make in your life. Contact Rehoboth Healthcare Professionals today to discuss your healthcare needs and explore how we can support your journey to wellness.",
     },
-  ]);
+  ];
 
   return (
     <div>

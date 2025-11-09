@@ -1,26 +1,33 @@
 import "../src/MissionAndServices.css";
 import { useState, type JSX } from "react";
 
-const drink = (weight: number | string): string | number => {
-  if (typeof weight === "number") return weight * 4;
-  else {
-    return parseInt(weight);
+type Num = number;
+
+const num: Num[] = [2, 5, 6, 7, 8, 30, 34, 7, 9];
+const getNum = (value: Num[]): Num[] => {
+  let sum: Num[] = [];
+  for (let val of value) {
+    if (val % 2 == 0) {
+      sum.push(val);
+    }
   }
+  return sum;
 };
-console.log(drink("50"));
-console.log(drink("15"));
+
+const ans = getNum(num);
+console.log(ans);
 
 type Content = {
   id: string;
   content: JSX.Element;
   title: string;
   href: string;
-};
+}[];
 
 const MissionAndService = () => {
   const [isActive, setIsActive] = useState<string>("mission");
 
-  const content: Content[] = [
+  const content: Content = [
     {
       id: "mission",
       content: (
