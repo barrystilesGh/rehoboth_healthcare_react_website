@@ -1,22 +1,6 @@
 import "../src/MissionAndServices.css";
 import { useState, type JSX } from "react";
 
-type Num = number;
-
-const num: Num[] = [2, 5, 6, 7, 8, 30, 34, 7, 9];
-const getNum = (value: Num[]): Num[] => {
-  let sum: Num[] = [];
-  for (let val of value) {
-    if (val % 2 == 0) {
-      sum.push(val);
-    }
-  }
-  return sum;
-};
-
-const ans = getNum(num);
-console.log(ans);
-
 type Content = {
   id: string;
   content: JSX.Element;

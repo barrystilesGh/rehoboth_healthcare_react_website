@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState, type JSX, type RefObject } from "react";
 import "../src/ImageSlider.css";
 
 type CtaData = {
@@ -7,7 +8,9 @@ type CtaData = {
   content: string;
 }[];
 
-const ImageSlider = () => {
+const ImageSlider = (): JSX.Element => {
+  const [activeSlide, setActiveSlide] = useState<number>(0);
+
   const ctaData: CtaData = [
     {
       key: "001",
@@ -38,35 +41,61 @@ const ImageSlider = () => {
         " With a commitment to the highest standards of care, our healthcare professionals bring expertise and dedication to every service we offer.",
     },
     {
-      key: "004",
+      key: "005",
       status: " ",
       title: "Contact Us",
       content:
         " Discover the difference that personalized and compassionate home health care can make in your life. Contact Rehoboth Healthcare Professionals today to discuss your healthcare needs and explore how we can support your journey to wellness.",
     },
   ];
+  useEffect(() => {
+    let rotator = setInterval(() => {
+      setActiveSlide((prev) => {
+        return (prev += 1) % ctaData.length;
+      });
+    }, 10000);
+
+    return () => clearInterval(rotator);
+  }, []);
 
   return (
     <div>
       {/* <!-- Image slider --> */}
       <div className='slider'>
-        <div className='slide-wrapper'>
-          <div className='slideItem'>
-            {ctaData.map((cta) => (
-              <div key={cta.key} className='cta'>
+        <div
+          className='slide-wrapper'
+          style={{ transform: `translateX(-${activeSlide * 100}vw)` }}
+          onMouseEnter={() => {
+            setActiveSlide(activeSlide);
+          }}
+          onMouseLeave={() => {
+            setActiveSlide((prev) => {
+              return (prev = 0);
+            });
+          }}
+        >
+          {ctaData.map((cta) => (
+            <div key={cta.key} className='slideItem'>
+              <div className='cta'>
                 <p>
                   {cta.status}
-                  <span>
-                    <span className='pulse pulse1'></span>
-                    <span className='pulse pulse2'></span>
-                    <span className='pulse pulse3'></span>
-                  </span>
+                  {cta.status === "Recruiting" ? (
+                    <span>
+                      <span className='pulse pulse1'></span>
+                      <span className='pulse pulse2'></span>
+                      <span className='pulse pulse3'></span>
+                    </span>
+                  ) : (
+                    ""
+                  )}
                 </p>
                 <h3 className='calltoaction'>{cta.title}</h3>
                 <p>{cta.content}</p>
               </div>
-            ))}
-            {/* <!-- <div className="link">
+            </div>
+          ))}
+
+          {/* <!-- <div className="link">
                        <ul>
                         <li>
                            <a href="" target="_blank">
@@ -80,7 +109,6 @@ const ImageSlider = () => {
                         </li>
                       </ul>
                     </div> --> */}
-          </div>
         </div>
       </div>
     </div>

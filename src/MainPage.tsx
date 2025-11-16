@@ -1,8 +1,8 @@
-import NurseAndPatient from "../public/images/nurseandpatient.jpeg";
-import HoldingOfHands from "../public/images/holdingof-hands.jpg";
-import BPChecking from "../public/images/bp-checking.jpg";
-import MotherAndDaugther from "../public/images/mother-and-daughter.jpg";
-import CareHome from "../public/images/care-home.jpg";
+import NurseAndPatient from "./assets/images/nurseandpatient.jpeg";
+import HoldingOfHands from "./assets/images/holdingof-hands.jpg";
+import BPChecking from "./assets/images/bp-checking.jpg";
+import MotherAndDaugther from "./assets/images/mother-and-daughter.jpg";
+import CareHome from "./assets/images/care-home.jpg";
 import "../src/MainPage.css";
 import { Link } from "react-scroll";
 
