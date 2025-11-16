@@ -70,6 +70,36 @@
   color: #fff;
 }
 
+.sliderBtns {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+}
+
+.sliderBtns .btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  outline: 1px solid #3bf4fb;
+  outline-offset: -4px;
+
+  transition: background-color 0.3s ease;
+}
+
+.sliderBtns .btn:hover,
+.btn:focus {
+  width: 15px;
+  height: 15px;
+}
+
+.sliderBtns .active {
+  background-color: #ac05df;
+  transform: scale(1.3);
+}
+
 span .pulse {
   display: inline-block;
   width: 5px;
@@ -92,10 +122,10 @@ span .pulse3 {
 @keyframes pulse {
   from {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1.3);
   }
   to {
     opacity: 0.25;
-    transform: scale(0.75);
+    transform: scale(1);
   }
 }

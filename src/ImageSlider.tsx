@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState, type JSX, type RefObject } from "react";
+import { useEffect, useState, type JSX } from "react";
 import "../src/ImageSlider.css";
 
-type CtaData = {
+type SliderData = {
   key: string;
   status: string;
   title: string;
@@ -10,8 +10,9 @@ type CtaData = {
 
 const ImageSlider = (): JSX.Element => {
   const [activeSlide, setActiveSlide] = useState<number>(0);
+  const [isMouseEnter, setIsMouseEnter] = useState<boolean>(false);
 
-  const ctaData: CtaData = [
+  const sliderData: SliderData = [
     {
       key: "001",
       status: "Recruiting",
@@ -48,15 +49,20 @@ const ImageSlider = (): JSX.Element => {
         " Discover the difference that personalized and compassionate home health care can make in your life. Contact Rehoboth Healthcare Professionals today to discuss your healthcare needs and explore how we can support your journey to wellness.",
     },
   ];
-  useEffect(() => {
-    let rotator = setInterval(() => {
-      setActiveSlide((prev) => {
-        return (prev += 1) % ctaData.length;
-      });
-    }, 10000);
 
+  useEffect(() => {
+    let rotator: number;
+    if (isMouseEnter) {
+      rotator = setInterval(() => {
+        setActiveSlide((prev) => {
+          return (prev += 1) % sliderData.length;
+        });
+      }, 10000);
+    } else {
+      setActiveSlide(0);
+    }
     return () => clearInterval(rotator);
-  }, []);
+  }, [isMouseEnter]);
 
   return (
     <div>
@@ -66,15 +72,13 @@ const ImageSlider = (): JSX.Element => {
           className='slide-wrapper'
           style={{ transform: `translateX(-${activeSlide * 100}vw)` }}
           onMouseEnter={() => {
-            setActiveSlide(activeSlide);
+            setIsMouseEnter(true);
           }}
           onMouseLeave={() => {
-            setActiveSlide((prev) => {
-              return (prev = 0);
-            });
+            setIsMouseEnter(false);
           }}
         >
-          {ctaData.map((cta) => (
+          {sliderData.map((cta) => (
             <div key={cta.key} className='slideItem'>
               <div className='cta'>
                 <p>
@@ -91,6 +95,17 @@ const ImageSlider = (): JSX.Element => {
                 </p>
                 <h3 className='calltoaction'>{cta.title}</h3>
                 <p>{cta.content}</p>
+              </div>
+              <div className='sliderBtns'>
+                {sliderData.map((slideBtn, index) => (
+                  <button
+                    key={slideBtn.key}
+                    className={`btn ${index === activeSlide ? "active" : ""}`}
+                    onClick={() => {
+                      setActiveSlide(index);
+                    }}
+                  ></button>
+                ))}
               </div>
             </div>
           ))}
