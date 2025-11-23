@@ -94,7 +94,7 @@ const Footer = () => {
           <p>Website Designed by Barry Stiles</p>
           <span>
             <i className='fa-solid fa-house'></i>
-            <Link to='tab1' smooth={true} duration={300}>
+            <Link to='home' smooth={true} duration={300}>
               To Home
             </Link>
           </span>
