@@ -1,4 +1,4 @@
-import Logo from "../public/images/Rehoboth logo.png";
+import Logo from "../src/assets/images/Rehoboth logo.png";
 
 import "../src/HomePage.css";
 import Header from "./Header";
